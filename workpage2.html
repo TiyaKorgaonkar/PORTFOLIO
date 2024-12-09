@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <style>
+        @font-face {
+            font-family: 'Typewriter';
+            src: url('typewriter.ttf'); /* Replace with the path to your typewriter font */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Typewriter', monospace;
+            cursor: pointer; /* Show a pointer cursor for clickable functionality */
+        }
+
+        /* Full-screen background */
+        .background {
+            background: url('WORKPAGE2.png') no-repeat center center fixed;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end; /* Align text initially to the right */
+            align-items: center; /* Center vertically */
+            padding: 50px;
+        }
+
+        /* Text styling for work content */
+        .work-text {
+            text-align: right;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #000;
+            max-width: 40%; /* Keep width for readability */
+            margin-right: 200px; /* Shift text further to the left */
+        }
+
+        /* Back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background">
+        <!-- Work text content -->
+        <div class="work-text">
+            <p><strong>Project 2- Portrait Series</strong></p>
+            <p>This digital illustration portrays a friend through the lens of a retro digital camera, emphasizing their calm and introspective demeanor. The subject's expressive, stylized features are framed within the camera's screen, adding a meta-layer of observation. The muted color palette and understated details focus on their quiet presence, contrasted by a patterned, nostalgic backdrop.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add click event listener to the entire page
+        document.getElementById('background').addEventListener('click', function(event) {
+            const pageWidth = window.innerWidth; // Get the total width of the page
+            const clickX = event.clientX; // Get the X position of the click
+
+            if (clickX < pageWidth / 2) {
+                // If clicked on the left side
+                location.href = 'workpage1.html'; // Replace with the URL of the previous page
+            } else {
+                // If clicked on the right side
+                location.href = 'workpage3.html'; // Replace with the URL of the next page
+            }
+        });
+    </script>
+</body>
+</html>
